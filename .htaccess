@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule %{HTTP_HOST} !^git.ose.devapps.unc.edu$
+   RewriteRule ^.*$ https://sc.apps.unc.edu%{REQUEST_URI} [R=301,L]
+</IfModule>
